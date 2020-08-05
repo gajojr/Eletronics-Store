@@ -19,9 +19,7 @@ btnDodaj.addEventListener('click', () => {
     const submit = pravljenjeDiv.querySelector("#napraviDeo");
     const reset = pravljenjeDiv.querySelector("#ponistiDeo");
     submit.addEventListener('click', () => {
-        const xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET", `insert.php?imeDela=${imeDela}&opis=${opis}`, false);
-        xmlhttp.send(null);
+
     })
     reset.addEventListener('click', () => {
         pravljenjeDiv.reset();
