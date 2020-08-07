@@ -18,6 +18,7 @@
 <body>
     <div class="container mt-5">
         <h1 style="text-align: center;">Hello, admin!!!</h1>
+        <!--Dugmad za izbor div elementa za manipulaciju komponente-->
         <form>
             <div class="form-group">
                 <span style="font-weight: bolder;">Akcije: </span>
@@ -28,7 +29,8 @@
                 <button type="button" class="btn btn-warning" id="izmeni">Izmeni postojecu komponentu</button>
             </div>
         </form>
-        <form class="mt-5 izmena breadcrumb" id="pravljenje" action="../code/insert.php" method="post">
+        <!--Forma za pravljenje nove komponente, po defaultu nije prikazana-->
+        <form class="mt-5 izmena breadcrumb" id="pravljenje" method="post">
             <div class="form-group col">
                 <label for="imeDela">Ime dela</label>
                 <input type="text" class="form-control" id="imeDela" placeholder="Tranzistor" />
@@ -42,6 +44,7 @@
                 <button type="reset" class="btn btn-danger" id="ponistiDeo">Ponisti</button>
             </div>
         </form>
+        <!--Forma za brisanje postojece komponente, po defaultu nije prikazana-->
         <form class="mt-5 izmena" id="brisanjeKomponente" method="delete">
             <div class="form-group mt-5" style="display: flex; justify-content: flex-start;" role="group" aria-label="Basic example">
                 <label for="brisanje" class="mr-3">Izaberi komponentu za brisanje:</label>
@@ -49,6 +52,7 @@
                 <button type="submit" class="btn btn-success">trazi</button>
             </div>
         </form>
+        <!--Forma za izmenu postojece komponente, po defaultu nije prikazana-->
         <form class="mt-5 izmena" id="izmena" method="put">
             <div class="form-group mt-5" style="display: flex; justify-content: flex-start;" role="group" aria-label="Basic example">
                 <label for="menjanje" class="mr-3">Izaberi komponentu za modifikovanje:</label>
