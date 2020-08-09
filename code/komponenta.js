@@ -24,10 +24,16 @@ btnDodaj.addEventListener('click', () => {
     const opis = pravljenjeDiv.querySelector('#opis').value;
     const submit = pravljenjeDiv.querySelector("#napraviDeo");
     const reset = pravljenjeDiv.querySelector("#ponistiDeo");
-    // na klik se salju podaci u bazu i pravi se novi deo
+    // na klik se salju podaci u bazu ako je vazeca forma i pravi se novi deo
     submit.addEventListener('click', () => {
-        if (imeDela && opis) {
-
+        if (!imeDela && !opis) {
+            // drmajuca animacija na oba inputa
+        } else if (!imeDela) {
+            // drmajuca animacija na ime dela input
+        } else if (!opis) {
+            // drmajuca animacija na opis input
+        } else {
+            // salji podatke u bazu
         }
     })
 

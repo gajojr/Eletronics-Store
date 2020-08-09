@@ -33,11 +33,11 @@
         <form class="mt-5 izmena breadcrumb" id="pravljenje" method="post">
             <div class="form-group col">
                 <label for="imeDela">Ime dela</label>
-                <input type="text" class="form-control" id="imeDela" placeholder="Tranzistor" />
+                <input type="text" class="form-control" id="imeDela" placeholder="Tranzistor" required/>
             </div>
             <div class="form-group col">
                 <label for="opis">Opis dela:</label>
-                <input type="text" class="form-control" id="opis" placeholder="Tranzistor je aktivni poluprovodnički element sa tri izvoda..." />
+                <input type="text" class="form-control" id="opis" placeholder="Tranzistor je aktivni poluprovodnički element sa tri izvoda..." required/>
             </div>
             <div class="btn-group col ml-5" style="display: flex; justify-content: flex-start;" role="group" aria-label="Basic example">
                 <button type="button" class="btn btn-success" id="napraviDeo">Napravi</button>
@@ -48,7 +48,7 @@
         <form class="mt-5 izmena" id="brisanjeKomponente" method="delete">
             <div class="form-group mt-5" style="display: flex; justify-content: flex-start;" role="group" aria-label="Basic example">
                 <label for="brisanje" class="mr-3">Izaberi komponentu za brisanje:</label>
-                <input type="text" id="brisanje" class="mr-2">
+                <input type="text" id="brisanje" class="mr-2" required>
                 <button type="submit" class="btn btn-success">trazi</button>
             </div>
         </form>
@@ -56,7 +56,7 @@
         <form class="mt-5 izmena" id="izmena" method="put">
             <div class="form-group mt-5" style="display: flex; justify-content: flex-start;" role="group" aria-label="Basic example">
                 <label for="menjanje" class="mr-3">Izaberi komponentu za modifikovanje:</label>
-                <input type="text" id="menjanje" class="mr-2">
+                <input type="text" id="menjanje" class="mr-2" required>
                 <button type="submit" class="btn btn-success mr-2">primeni</button>
                 <button type="reset" class="btn btn-danger">ponisti</button>
             </div>
