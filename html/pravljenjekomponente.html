@@ -12,7 +12,23 @@
             width: 100px;
             height: 100px;
         }
+        
+        .error {
+            position: relative;
+            animation: shake .1s linear;
+            animation-iteration-count: 3;
+        }
+        
+        @keyframes shake {
+            0% {
+                left: -5px;
+            }
+            100% {
+                right: -5px;
+            }
+        }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -30,14 +46,14 @@
             </div>
         </form>
         <!--Forma za pravljenje nove komponente, po defaultu nije prikazana-->
-        <form class="mt-5 izmena breadcrumb" id="pravljenje" method="post">
+        <form class="mt-5 izmena breadcrumb" id="pravljenje" method="post" action="#">
             <div class="form-group col">
                 <label for="imeDela">Ime dela</label>
-                <input type="text" class="form-control" id="imeDela" placeholder="Tranzistor" required/>
+                <input type="text" class="form-control" id="imeDela" placeholder="Tranzistor..." required/>
             </div>
             <div class="form-group col">
                 <label for="opis">Opis dela:</label>
-                <input type="text" class="form-control" id="opis" placeholder="Tranzistor je aktivni poluprovodnički element sa tri izvoda..." required/>
+                <input type="text" class="form-control" id="opis" placeholder="Tranzistor je aktivni polu..." required/>
             </div>
             <div class="btn-group col ml-5" style="display: flex; justify-content: flex-start;" role="group" aria-label="Basic example">
                 <button type="button" class="btn btn-success" id="napraviDeo">Napravi</button>
@@ -49,15 +65,17 @@
             <div class="form-group mt-5" style="display: flex; justify-content: flex-start;" role="group" aria-label="Basic example">
                 <label for="brisanje" class="mr-3">Izaberi komponentu za brisanje:</label>
                 <input type="text" id="brisanje" class="mr-2" required>
-                <button type="submit" class="btn btn-success">trazi</button>
+                <button type="submit" class="btn btn-success" id="trazi">trazi</button>
             </div>
         </form>
         <!--Forma za izmenu postojece komponente, po defaultu nije prikazana-->
         <form class="mt-5 izmena" id="izmena" method="put">
             <div class="form-group mt-5" style="display: flex; justify-content: flex-start;" role="group" aria-label="Basic example">
-                <label for="menjanje" class="mr-3">Izaberi komponentu za modifikovanje:</label>
-                <input type="text" id="menjanje" class="mr-2" required>
-                <button type="submit" class="btn btn-success mr-2">primeni</button>
+                <label for="menjanje" class="mr-3">Izaberi ime komponente za modifikovanje:</label>
+                <input type="text" id="menjanjeime" class="mr-2" required>
+                <label for="menjanje" class="mr-3">Promeni opis:</label>
+                <input type="text" id="menjanjeopis" class="mr-2" required>
+                <button type="submit" class="btn btn-success mr-2" id="primeni">primeni</button>
                 <button type="reset" class="btn btn-danger">ponisti</button>
             </div>
         </form>

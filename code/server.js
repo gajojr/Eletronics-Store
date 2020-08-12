@@ -4,7 +4,7 @@ const app = express()
 const morgan = require('morgan')
 const { urlencoded, json } = require('body-parser')
 
-
+//Sema se sastoji iz imena i opisa
 const componentSchema = new mongoose.Schema({
     ime: {
         type: String,
@@ -78,7 +78,6 @@ connect()
             ime: "Relej",
             opis: "Relej (ponekad rele) je naprava koja se koristi za prekidanje ili uspostavljanje strujnog kola putem elektromagneta koji otvara i zatvara strujne kontakte. Ovakva vrsta releja se naziva elektromagnetski relej.",
         })
-        app.listen(5000)
         console.log(tranzistor)
         console.log(tiristor)
         console.log(dioda)
@@ -87,5 +86,6 @@ connect()
         console.log(baterija)
         console.log(prekidac)
         console.log(relej)*/
+        app.listen(5000)
     })
     .catch(e => console.error(e))
