@@ -36,6 +36,10 @@ app.use(favicon(path.join(__dirname, '../public', 'assets', 'favicon.ico')));
 
 app.use(express.static('public'));
 
+app.get('/', (req, res) => {
+    res.redirect('/delovi');
+});
+
 app.get('/pravljenje', (req, res) => {
     res.sendFile(path.join(__dirname, '../public', 'html', 'pravljenjekomponente.html'));
 });
