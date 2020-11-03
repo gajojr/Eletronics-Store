@@ -27,6 +27,30 @@
                 right: -5px;
             }
         }
+        
+        .linkovi {
+            background-color: rgb(223, 206, 206);
+            border-radius: 10px;
+            margin-top: 100px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        
+        .link {
+            padding-top: 10px;
+            width: 300px;
+            height: 100px;
+            background-color: #000;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 35px;
+        }
+        
+        .linkovi a {
+            color: #fff;
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
@@ -55,16 +79,19 @@
                 <label for="opis">Opis dela:</label>
                 <input type="text" class="form-control" id="opis" placeholder="Tranzistor je aktivni polu..." required/>
             </div>
+            <div class="form-group col">
+                <label for="opis">Kolicina:</label>
+                <input type="number" min="1" class="form-control" id="kolicina" placeholder="..." required/>
+            </div>
             <div class="btn-group col ml-5" style="display: flex; justify-content: flex-start;" role="group" aria-label="Basic example">
                 <button type="button" class="btn btn-success" id="napraviDeo">Napravi</button>
-                <button type="reset" class="btn btn-danger" id="ponistiDeo">Ponisti</button>
             </div>
         </form>
         <!--Forma za brisanje postojece komponente, po defaultu nije prikazana-->
         <form class="mt-5 izmena" id="brisanjeKomponente" method="delete">
             <div class="form-group mt-5" style="display: flex; justify-content: flex-start;" role="group" aria-label="Basic example">
                 <label for="brisanje" class="mr-3">Izaberi komponentu za brisanje:</label>
-                <input type="text" id="brisanje" class="mr-2" required>
+                <input type="text" id="brisanje" class="mr-2" required ime="zaBrisanje">
                 <button type="submit" class="btn btn-success" id="trazi">trazi</button>
             </div>
         </form>
@@ -75,12 +102,21 @@
                 <input type="text" id="menjanjeime" class="mr-2" required>
                 <label for="menjanje" class="mr-3">Promeni opis:</label>
                 <input type="text" id="menjanjeopis" class="mr-2" required>
+                <label for="menjanje" class="mr-3">Promeni kolicinu:</label>
+                <input type="number" min="1" id="menjanjekolicina" class="mr-2" required>
                 <button type="submit" class="btn btn-success mr-2" id="primeni">primeni</button>
-                <button type="reset" class="btn btn-danger">ponisti</button>
             </div>
         </form>
+        <div class="linkovi">
+            <div class="link">
+                <a class="nav-link" href="delovi">Delovi</a>
+            </div>
+            <div class="link">
+                <a class="nav-link" href="home">Home</a>
+            </div>
+        </div>
     </div>
-    <script src="../code/komponenta.js"></script>
+    <script src="../frontendcode/komponenta.js"></script>
 </body>
 
 </html>
